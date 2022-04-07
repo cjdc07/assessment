@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<order>
+	<customer_info>
+	   <name title="Full Name" type="text" required="true"></name>
+	   <email title="Email Address" type="text" required="true" format="email@email.com"></email>
+	   <phone_number title="Phone Number" type="text" required="true" format="111-111-1111"></phone_number>
+           <address>
+                <street_address title="Street Address" type="Text" required="true"></street_address>
+		<city title="City" type="Text" required="true"></city>
+		<province title="Province" type="Select" required="true" options="AB, BC, MB, NB, NL, NS, NT, NU, PE, ON, PE, QC, SK, YT"></province>
+		<postal_code title="Postal Code" type="text" required="true" format="A1A 1A1"></postal_code>
+	   </address>
+	</customer_info>
+
+	<order_details>
+	  <item title="Item" type="select" required="false" options="One|100, Two|200, Three|300" multiple="true"></item>
+	  <expedited title="Expedited Shipping" type="radio" required="true" options="Yes,No" cost="300"></expedited>
+	  <tax title="Taxes" type="text" required="true" disabled="true" tax_rate="15%" sum="item">0</tax>
+	  <final_price title="Total" type="text" required="true" disabled="true" sum="item, tax"></final_price>
+	</order_details>
+</order>
