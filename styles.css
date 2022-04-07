@@ -1,0 +1,11 @@
+.field {
+  display: block;
+  margin-bottom: 8px;
+}
+.label {
+  margin-top: 8px;
+}
+
+.file-input {
+  margin-bottom: 8px;
+}
